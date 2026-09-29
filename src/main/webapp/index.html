@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Jenkins Web Application</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>🚀 Sample Jenkins Web Application</h1>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>Welcome!</h2>
+            <p>This is your Maven-based Java web application ready for Jenkins CI/CD pipeline testing and deployment.</p>
+            
+            <div class="info-box">
+                <strong>Application Details:</strong>
+                <ul>
+                    <li>Technology: Java with Maven</li>
+                    <li>Build Type: WAR (Web Application Archive)</li>
+                    <li>Testing Framework: JUnit</li>
+                    <li>CI/CD: Jenkins Ready</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Available Endpoints</h2>
+            <ul>
+                <li><a href="hello" class="button">GET /hello</a> - Test servlet endpoint</li>
+                <li>GET / - This welcome page</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Project Structure</h2>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;">
+samplejenkinsweb/
+├── pom.xml
+├── src/
+│   ├── main/
+│   │   ├── java/com/example/
+│   │   │   ├── web/HelloServlet.java
+│   │   │   └── util/StringUtil.java
+│   │   └── webapp/
+│   │       ├── index.html (THIS FILE)
+│   │       ├── css/style.css
+│   │       ├── js/app.js
+│   │       └── WEB-INF/web.xml
+│   └── test/
+│       └── java/com/example/
+│           └── util/StringUtilTest.java
+├── Jenkinsfile
+└── README.md
+            </pre>
+        </div>
+
+        <div class="card">
+            <h2>Build Commands</h2>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;">
+# Compile
+mvn compile
+
+# Run Tests
+mvn test
+
+# Package WAR
+mvn clean package
+
+# Output: target/samplejenkinsweb.war
+            </pre>
+        </div>
+
+        <div class="card">
+            <p class="success">✅ Application is running successfully!</p>
+            <p style="font-size: 12px; color: #999;">Version: 1.0.0 | Build Date: 2026-09-29</p>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
